@@ -17,7 +17,7 @@ export default async ({ req, res, log, error }) => {
         client = await getClient();
     }
 
-    await insertTestData(client);
+    //await insertTestData(client);
 
     const warehouses = await listWarehouses(client);
 
