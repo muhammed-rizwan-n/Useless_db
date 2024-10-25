@@ -35,7 +35,7 @@ export async function insertTestData(client) {
  */
 export async function listWarehouses(client, page = 1) {
     const limit = 100;
-    const cursor = client.db("main").collection("useless_db").find().limit(limit).skip((page - 1) * limit);
+    const cursor = client.db("useless_db").collection("users").find().limit(limit).skip((page - 1) * limit);
 
     const documents = [];
     for await (const doc of cursor) {
